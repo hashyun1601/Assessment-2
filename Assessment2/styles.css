@@ -1,0 +1,124 @@
+:root {
+   --primary-color: #ff8c00;
+   --secondary-color: grey;
+   --error-color: red;
+   --background-color: #f4f4f4;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background-color: var(--background-color);
+}
+
+.container {
+   width: 640px;
+   max-width: 100%;
+   padding: 20px;
+   background-color: white;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#phoneInput {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+#countryCode {
+   width: 20%;
+   height: 36px;
+   margin-right: 10px;
+}
+
+#mobileNumber {
+   width: 75%;
+}
+
+
+.primary-text {
+   color: var(--primary-color);
+   text-align: center;
+}
+
+.secondary-text {
+   color: var(--secondary-color);
+   font-size: 30px;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+}
+
+.input-group {
+   display: flex;
+   justify-content: space-between;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+button[type="submit"] {
+   padding: 10px 20px;
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+}
+
+button[type="submit"]:hover {
+   background-color: #e67300;
+}
+
+.error {
+   color: var(--error-color);
+   display: none;
+}
+
+input:invalid + .error {
+   display: block;
+}
+
+hr {
+   border: none;
+   border-top: 1px solid var(--secondary-color);
+   margin: 20px 0;
+}
+
+.poweredBy {
+   color: blue;
+   text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="date"],
+    input[type="email"] {
+       width: 100%;
+    }
+}
+

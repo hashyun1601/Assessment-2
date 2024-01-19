@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, initial-scale=1.0">
+    <title>Mulah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Page 1 -->
+    <div id="page1">
+        <h1 class="primary-text">MULAH</h1>
+        <p class="secondary-text">Hello,</p>
+        <p class="secondary-text">Welcome!</p>
+        <p class="primary-text">Check Your loyalty Points & Rewards</p>
+
+        <!-- ... -->
+        <form id="checkPointsForm" class="form">
+            <div id="phoneInput" class="input-group">
+                <select id="countryCode" name="countryCode">
+                    <option value="+60" selected>+60</option>
+                    <!-- Add other country codes here -->
+                </select>
+                <input type="number" id="mobileNumber" name="mobileNumber" required pattern="\d{10}">
+            </div>
+            <button type="submit">Check Loyalty Points</button>
+        </form>
+        <!-- ... -->
+
+
+        <hr>
+
+        <p id="poweredBy" class="poweredBy">Powered by MulahRewards.com</p>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" style="display: none;">
+        <h1 class="primary-text">MULAH</h1>
+        <h2>Registration</h2>
+        <p>Please fill up your details.</p>
+
+        <form id="registrationForm" class="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <p class="error">*Please insert a name.</p>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" required>
+            <p class="error">*Please insert your birthday.</p>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <p class="error">*Please insert a valid email address.</p>
+
+            <button type="submit">Continue</button>
+        </form>
+
+        <p class="poweredBy">Powered by MulahRewards.com</p>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="container>">
+        <div id="page3" style="display: none;">
+            <h2>User Details</h2>
+    
+            <p id="displayPhoneNumber"></p>
+            <p id="displayName"></p>
+            <p id="displayBirthday"></p>
+            <p id="displayEmail"></p>
+        </div>
+    </div>
+    
+</div>
+
+<script src='script.js'></script>
+
+</body>
+</html>
+
+
+
